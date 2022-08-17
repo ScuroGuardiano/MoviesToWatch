@@ -1,5 +1,7 @@
 MoviesToWatch - Simple movies to watch list to learn some C++ and destroy my weak mind
 
+You must install Boost to compile this project.
+
 Licenses:
 Content in `blog` directory is copyrighted
 Everything else is on WTFPL 2.0, full license text is in `LICENSE` file at the root of the project.
