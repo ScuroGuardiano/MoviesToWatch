@@ -4,10 +4,7 @@ project(MoviesToWatch)
 
 set(CMAKE_CXX_STANDARD 20)
 
-find_package(Boost REQUIRED)
-
 add_executable(${PROJECT_NAME} main.cpp)
-add_executable(GenerateDatabase gen_db.cpp)
 
 add_definitions(-DCMAKE_EXPORT_COMPILE_COMMANDS=ON)
 
@@ -21,9 +18,7 @@ CPMAddPackage(
 )
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${DROGON_INCLUDE_DIRS} ${Boost_INCLUDE_DIRS})
-target_include_directories(GenerateDatabase PUBLIC ${DROGON_INCLUDE_DIRS} ${Boost_INCLUDE_DIRS})
 
 target_link_libraries(${PROJECT_NAME} PRIVATE drogon)
-target_link_libraries(GenerateDatabase PRIVATE drogon)
 
 add_subdirectory(src)
