@@ -48,4 +48,4 @@ build
 
 .vscode
 
-database/config.json
+database
